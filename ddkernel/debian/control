@@ -1,0 +1,12 @@
+Source: ddkernel
+Section: ddkernel
+Priority: extra
+Maintainer: guoqiang<qiang.guo@unlun.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 0.1
+Homepage: 
+
+Package:ddkernel
+Architecture: any
+Depends: 
+Description: dd kernel 

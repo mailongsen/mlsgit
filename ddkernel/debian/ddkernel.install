@@ -1,0 +1,4 @@
+src/ddkernel.ko /lib/modules/kernel/net/ddkernel/
+tools/alert_mail.sh /usr/local/bin/
+tools/alert_kernel.sh /usr/local/bin/
+tools/sendmail /usr/local/bin/

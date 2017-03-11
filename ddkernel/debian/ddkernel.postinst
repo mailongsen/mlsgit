@@ -1,0 +1,4 @@
+#!/bin/sh
+chmod +x /usr/local/bin/sendmail
+chmod +x /usr/local/bin/alert_kernel.sh
+chmod +x /usr/local/bin/alert_mail.sh

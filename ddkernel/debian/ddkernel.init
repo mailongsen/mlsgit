@@ -1,0 +1,35 @@
+#!/bin/sh
+
+if [ -f /etc/init.d/functions ]; then
+  . /etc/init.d/functions
+elif [ -f /etc/rc.d/init.d/functions ] ; then
+  . /etc/rc.d/init.d/functions
+else
+  exit 0
+fi
+
+prog=ddkernel
+PATH=/sbin:/usr/local/sbin:/usr/bin:/bin
+SCRIPTNAME=/etc/init.d/$prog
+PATH=/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+
+case "$1" in
+  start)
+	echo -n "Starting $prog"
+        daemon /sbin/insmod /lib/modules/kernel/net/ddkernel/ddkernel.ko
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ]
+        ;;
+  stop)
+	echo -n "Starting $prog"
+        daemon /sbin/rmmod ddkernel
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ]
+        ;;
+  *)
+        echo "Usage: $0 {start|stop}" >&2
+        exit 3
+        ;;
+esac
