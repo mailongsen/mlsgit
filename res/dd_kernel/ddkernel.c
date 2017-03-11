@@ -40,7 +40,7 @@
 
 #define DD_TEST_PROC            "dd_test_info"
 
-#define IPNODE_HASH_SIZE	10000
+#define IPNODE_HASH_SIZE	10001
 #define DD_MDMN_PROC 		"dd_mdname_info"
 #define DD_IPADDR_PROC 		"dd_ipaddr_info"
 #define DD_SUBDMN_PROC 		"dd_subdmn_info"
