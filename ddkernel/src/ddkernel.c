@@ -531,7 +531,7 @@ static void delete_node(int hash ,char *d_name)
 
 static struct proc_dir_entry * ddproc_entry = NULL;
 static ssize_t dd_proc_read(struct file * file,char *data,size_t len,loff_t *off) {
-	char proc_msg[PROC_MSG_LEN]={"Anquanbao.com\n"};
+	char proc_msg[PROC_MSG_LEN]={"guoyaojin\n"};
 	if(*off > 0)
 		return 0;
 	if(copy_to_user( data , proc_msg , strlen(proc_msg)))
@@ -650,4 +650,4 @@ module_exit( _dd_kernel_exit );
 
 MODULE_VERSION("V1.0");
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Anquanbao.com");
+MODULE_AUTHOR("guoyaojin");
